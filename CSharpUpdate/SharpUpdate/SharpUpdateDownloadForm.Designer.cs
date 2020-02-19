@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblDownloading = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // lblDownloading
+            // 
+            this.lblDownloading.AutoSize = true;
+            this.lblDownloading.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblDownloading.Location = new System.Drawing.Point(35, 35);
+            this.lblDownloading.Name = "lblDownloading";
+            this.lblDownloading.Size = new System.Drawing.Size(343, 45);
+            this.lblDownloading.TabIndex = 0;
+            this.lblDownloading.Text = "Downloading Update...";
             // 
             // SharpUpdateDownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 185);
+            this.Controls.Add(this.lblDownloading);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -43,9 +55,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Downloading Update";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblDownloading;
     }
 }
