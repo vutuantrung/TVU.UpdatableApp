@@ -2,7 +2,7 @@
 using System.Net;
 using System.Xml;
 
-namespace CustomLibrary
+namespace SharpUpdate
 {
     internal class SharpUpdateXml
     {

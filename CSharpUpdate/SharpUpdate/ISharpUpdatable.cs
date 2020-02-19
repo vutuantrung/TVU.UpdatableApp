@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CustomLibrary
+namespace SharpUpdate
 {
     /// <summary>
     /// The interface that all applications need to implement in order to use SharpUpdate

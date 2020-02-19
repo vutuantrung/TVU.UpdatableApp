@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 
-namespace CustomLibrary
+namespace SharpUpdate
 {
     /// <summary>
     /// The type of hash to create

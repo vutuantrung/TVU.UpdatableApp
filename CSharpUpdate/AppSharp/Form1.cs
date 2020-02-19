@@ -1,4 +1,4 @@
-﻿using CustomLibrary;
+﻿using SharpUpdate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
