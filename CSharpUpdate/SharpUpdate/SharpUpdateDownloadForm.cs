@@ -70,7 +70,48 @@ namespace SharpUpdate
 
         private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            this.progressBar.Value = e.ProgressPercentage;
+            this.lblProgress.Text = $"Downloaded {FormatBytes(e.BytesReceived, 1, true)} of {FormatBytes(e.TotalBytesToReceive, 1, true)}";
+        }
+
+        private string FormatBytes(long bytes, int decimalPlaces, bool showByteType)
+        {
+            double newBytes = bytes;
+            string formatString = "{0";
+            string byteType = "B";
+
+            if (newBytes > 1024 && newBytes < 1048576)
+            {
+                newBytes /= 1024;
+                byteType = "KB";
+            }
+            else if (newBytes > 1048576 && newBytes < 1073741824)
+            {
+                newBytes /= 1048576;
+                byteType = "MB";
+            }
+            else
+            {
+                newBytes /= 1073741824;
+                byteType = "GB";
+            }
+
+            if (decimalPlaces > 0)
+                formatString += ":0.";
+
+            for (int i = 0; i < decimalPlaces; i++)
+            {
+                formatString += "0";
+            }
+
+            formatString += "}";
+
+            if (showByteType)
+            {
+                formatString += byteType;
+            }
+
+            return string.Format(formatString, newBytes);
         }
     }
 }
