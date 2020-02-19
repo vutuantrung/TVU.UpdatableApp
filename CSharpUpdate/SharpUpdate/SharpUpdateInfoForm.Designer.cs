@@ -31,6 +31,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblVersions = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,22 @@
             this.txtDescription.TabStop = false;
             this.txtDescription.Text = "";
             // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(9, 100);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(66, 13);
+            this.lblDescription.TabIndex = 3;
+            this.lblDescription.Text = "Description";
+            // 
             // SharpUpdateInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 244);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVersions);
             this.Controls.Add(this.pictureBox);
@@ -82,6 +94,7 @@
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -90,5 +103,6 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblVersions;
         private System.Windows.Forms.RichTextBox txtDescription;
+        private System.Windows.Forms.Label lblDescription;
     }
 }
