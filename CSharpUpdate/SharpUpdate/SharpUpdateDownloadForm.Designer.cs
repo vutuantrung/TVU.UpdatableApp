@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblDownloading = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // lblDownloading
@@ -41,11 +42,20 @@
             this.lblDownloading.TabIndex = 0;
             this.lblDownloading.Text = "Downloading Update...";
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(34, 111);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(344, 23);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar.TabIndex = 1;
+            // 
             // SharpUpdateDownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 185);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.lblDownloading);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -62,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblDownloading;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
