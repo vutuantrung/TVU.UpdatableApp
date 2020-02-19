@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.lblVersions = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,21 @@
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
+            // lblVersions
+            // 
+            this.lblVersions.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblVersions.Location = new System.Drawing.Point(104, 25);
+            this.lblVersions.Name = "lblVersions";
+            this.lblVersions.Size = new System.Drawing.Size(168, 54);
+            this.lblVersions.TabIndex = 1;
+            this.lblVersions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SharpUpdateInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 244);
+            this.Controls.Add(this.lblVersions);
             this.Controls.Add(this.pictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -61,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Label lblVersions;
     }
 }
