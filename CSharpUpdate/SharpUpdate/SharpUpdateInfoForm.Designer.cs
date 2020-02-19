@@ -68,6 +68,7 @@
             this.txtDescription.TabIndex = 2;
             this.txtDescription.TabStop = false;
             this.txtDescription.Text = "";
+            this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescription_KeyDown);
             // 
             // lblDescription
             // 
@@ -89,6 +90,7 @@
             this.btnBack.TabStop = false;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // SharpUpdateInfoForm
             // 
