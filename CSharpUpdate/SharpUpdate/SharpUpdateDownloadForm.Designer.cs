@@ -30,6 +30,7 @@
         {
             this.lblDownloading = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.lblProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDownloading
@@ -50,11 +51,21 @@
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 1;
             // 
+            // lblProgress
+            // 
+            this.lblProgress.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblProgress.Location = new System.Drawing.Point(34, 137);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(344, 13);
+            this.lblProgress.TabIndex = 2;
+            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SharpUpdateDownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 185);
+            this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.lblDownloading);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,5 +84,6 @@
 
         private System.Windows.Forms.Label lblDownloading;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label lblProgress;
     }
 }
