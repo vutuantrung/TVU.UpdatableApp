@@ -32,6 +32,7 @@
             this.lblVersions = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +79,23 @@
             this.lblDescription.TabIndex = 3;
             this.lblDescription.Text = "Description";
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(105, 223);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(73, 23);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.TabStop = false;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
             // SharpUpdateInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 244);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVersions);
@@ -104,5 +117,6 @@
         private System.Windows.Forms.Label lblVersions;
         private System.Windows.Forms.RichTextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Button btnBack;
     }
 }
