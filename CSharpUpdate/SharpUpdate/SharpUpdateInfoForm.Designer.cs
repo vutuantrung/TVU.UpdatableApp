@@ -30,6 +30,7 @@
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblVersions = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,26 @@
             this.lblVersions.TabIndex = 1;
             this.lblVersions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtDescription
+            // 
+            this.txtDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtDescription.Location = new System.Drawing.Point(12, 116);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
+            this.txtDescription.Size = new System.Drawing.Size(260, 96);
+            this.txtDescription.TabIndex = 2;
+            this.txtDescription.TabStop = false;
+            this.txtDescription.Text = "";
+            // 
             // SharpUpdateInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 244);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVersions);
             this.Controls.Add(this.pictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -73,5 +89,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblVersions;
+        private System.Windows.Forms.RichTextBox txtDescription;
     }
 }
