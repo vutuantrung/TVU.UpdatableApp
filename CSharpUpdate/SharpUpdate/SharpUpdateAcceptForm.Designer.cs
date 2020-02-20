@@ -30,6 +30,7 @@
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblUpdateAvail = new System.Windows.Forms.Label();
+            this.lblNewVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,21 @@
             this.lblUpdateAvail.Text = "An update is available! Would you like to update ?";
             this.lblUpdateAvail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblNewVersion
+            // 
+            this.lblNewVersion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblNewVersion.Location = new System.Drawing.Point(143, 69);
+            this.lblNewVersion.Name = "lblNewVersion";
+            this.lblNewVersion.Size = new System.Drawing.Size(154, 19);
+            this.lblNewVersion.TabIndex = 2;
+            this.lblNewVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SharpUpdateAcceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 132);
+            this.Controls.Add(this.lblNewVersion);
             this.Controls.Add(this.lblUpdateAvail);
             this.Controls.Add(this.pictureBox);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,5 +86,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblUpdateAvail;
+        private System.Windows.Forms.Label lblNewVersion;
     }
 }
