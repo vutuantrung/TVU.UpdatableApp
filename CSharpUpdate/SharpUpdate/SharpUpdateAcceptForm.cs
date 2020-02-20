@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SharpUpdate
 {
-    public partial class SharpUpdateAcceptForm : Form
+    internal partial class SharpUpdateAcceptForm : Form
     {
-        public SharpUpdateAcceptForm()
+        internal SharpUpdateAcceptForm()
         {
             InitializeComponent();
         }
