@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomLibrary\CustomLibrary.csproj">
-      <Project>{E8E14EAF-310E-411F-AA26-4679DF8403ED}</Project>
-      <Name>CustomLibrary</Name>
+    <ProjectReference Include="..\SharpUpdate\SharpUpdate.csproj">
+      <Project>{936665C0-3A7A-4ED0-9E9D-BEB6C5B3C1F2}</Project>
+      <Name>SharpUpdate</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
