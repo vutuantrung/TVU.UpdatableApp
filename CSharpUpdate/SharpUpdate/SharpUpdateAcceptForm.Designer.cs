@@ -31,6 +31,9 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblUpdateAvail = new System.Windows.Forms.Label();
             this.lblNewVersion = new System.Windows.Forms.Label();
+            this.btnDetails = new System.Windows.Forms.Button();
+            this.btnNo = new System.Windows.Forms.Button();
+            this.btnYes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +66,41 @@
             this.lblNewVersion.TabIndex = 2;
             this.lblNewVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnDetails
+            // 
+            this.btnDetails.Location = new System.Drawing.Point(259, 108);
+            this.btnDetails.Name = "btnDetails";
+            this.btnDetails.Size = new System.Drawing.Size(75, 23);
+            this.btnDetails.TabIndex = 3;
+            this.btnDetails.Text = "Details";
+            this.btnDetails.UseVisualStyleBackColor = true;
+            // 
+            // btnNo
+            // 
+            this.btnNo.Location = new System.Drawing.Point(178, 108);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(75, 23);
+            this.btnNo.TabIndex = 4;
+            this.btnNo.Text = "No";
+            this.btnNo.UseVisualStyleBackColor = true;
+            // 
+            // btnYes
+            // 
+            this.btnYes.Location = new System.Drawing.Point(97, 108);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(75, 23);
+            this.btnYes.TabIndex = 5;
+            this.btnYes.Text = "Yes";
+            this.btnYes.UseVisualStyleBackColor = true;
+            // 
             // SharpUpdateAcceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 132);
+            this.Controls.Add(this.btnYes);
+            this.Controls.Add(this.btnNo);
+            this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.lblNewVersion);
             this.Controls.Add(this.lblUpdateAvail);
             this.Controls.Add(this.pictureBox);
@@ -87,5 +120,8 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblUpdateAvail;
         private System.Windows.Forms.Label lblNewVersion;
+        private System.Windows.Forms.Button btnDetails;
+        private System.Windows.Forms.Button btnNo;
+        private System.Windows.Forms.Button btnYes;
     }
 }
