@@ -75,6 +75,7 @@
             this.Name = "SharpUpdateDownloadForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Downloading Update";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SharpUpdateDownloadForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

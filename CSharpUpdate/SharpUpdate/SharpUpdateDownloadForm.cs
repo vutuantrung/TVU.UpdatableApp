@@ -60,12 +60,37 @@ namespace SharpUpdate
 
         private void BgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            throw new NotImplementedException();
+            string file = ((string[])e.Argument)[0];
+            string updateMd5 = ((string[])e.Argument)[1];
+
+            if(Hasher.HashFile(file, HashType.MD5) != updateMd5)
+            {
+                e.Result = DialogResult.No;
+            }
+            else
+            {
+                e.Result = DialogResult.OK;
+            }
         }
 
         private void WebClient_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            throw new NotImplementedException();
+            if(e.Error != null)
+            {
+                this.DialogResult = DialogResult.No;
+                this.Close();
+            }else if (e.Cancelled)
+            {
+                this.DialogResult = DialogResult.Abort;
+                this.Close();
+            }
+            else
+            {
+                lblProgress.Text = "Verifying download...";
+                progressBar.Style = ProgressBarStyle.Marquee;
+
+                bgWorker.RunWorkerAsync(new string[] { this.tempFile, this.md5 });
+            }
         }
 
         private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -112,6 +137,23 @@ namespace SharpUpdate
             }
 
             return string.Format(formatString, newBytes);
+        }
+
+        private void SharpUpdateDownloadForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (webClient.IsBusy)
+            {
+                webClient.CancelAsync();
+                this.DialogResult = DialogResult.Abort;
+            }
+
+            if (bgWorker.IsBusy)
+            {
+                bgWorker.CancelAsync();
+                this.DialogResult = DialogResult.Abort;
+            }
+
+            this.Close();
         }
     }
 }
