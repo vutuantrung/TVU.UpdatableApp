@@ -12,21 +12,44 @@ using System.Windows.Forms;
 
 namespace SharpUpdate
 {
+    /// <summary>
+    /// Form that download the update
+    /// </summary>
     internal partial class SharpUpdateDownloadForm : Form
     {
+        /// <summary>
+        /// The web client to download the update
+        /// </summary>
         private WebClient webClient;
 
+        /// <summary>
+        /// The thread to hash the file on
+        /// </summary>
         private BackgroundWorker bgWorker;
 
+        /// <summary>
+        /// A temp file name to download to
+        /// </summary>
         private string tempFile;
 
+        /// <summary>
+        /// The MD5 hash of the file to download
+        /// </summary>
         private string md5;
 
+        /// <summary>
+        /// Gets the temps file path for the downloaded file
+        /// </summary>
         internal string TempFilePath
         {
             get { return this.tempFile; }
         }
 
+        /// <summary>
+        /// Creates a new SharpUpdateDownloadForm
+        /// </summary>
+        /// <param name="location"></param>
+        /// <param name="md5"></param>
         internal SharpUpdateDownloadForm(Uri location, string md5)
         {
             InitializeComponent();
@@ -34,6 +57,7 @@ namespace SharpUpdate
             tempFile = Path.GetTempFileName();
             this.md5 = md5;
 
+            // Set the temp file name and create new 0-byte file
             webClient = new WebClient();
             webClient.DownloadProgressChanged += WebClient_DownloadProgressChanged;
             webClient.DownloadFileCompleted += WebClient_DownloadFileCompleted;
