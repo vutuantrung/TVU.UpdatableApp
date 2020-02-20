@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SharpUpdate
 {
-    public partial class SharpUpdateDownloadForm : Form
+    internal partial class SharpUpdateDownloadForm : Form
     {
         private WebClient webClient;
 
@@ -27,7 +27,7 @@ namespace SharpUpdate
             get { return this.tempFile; }
         }
 
-        public SharpUpdateDownloadForm(Uri location, string md5)
+        internal SharpUpdateDownloadForm(Uri location, string md5)
         {
             InitializeComponent();
 
