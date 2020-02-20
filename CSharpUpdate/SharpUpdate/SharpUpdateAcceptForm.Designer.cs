@@ -74,6 +74,7 @@
             this.btnDetails.TabIndex = 3;
             this.btnDetails.Text = "Details";
             this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // btnNo
             // 
@@ -83,6 +84,7 @@
             this.btnNo.TabIndex = 4;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // btnYes
             // 
@@ -92,6 +94,7 @@
             this.btnYes.TabIndex = 5;
             this.btnYes.Text = "Yes";
             this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // SharpUpdateAcceptForm
             // 
